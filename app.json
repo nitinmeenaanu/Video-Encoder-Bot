@@ -1,31 +1,72 @@
 {
-    "name": "VideoEncoder",
-    "description": "A stable and Fast telegram video convertor bot which can compress, convert(video into audio and other video formats), rename and trim.",
-    "logo": "",
-    "keywords": [
-        "Best",
-        "telegram",
-        "Encoder",
-        "bot"
-    ],
-    "repository": "https://github.com/nitinmeenaanu/Video-Encoder-Bot",
-    "website": "",
-    "Owner": "https://t.me/cant_think_one",
+    "name": "The-Video-Encoder-Bot",
+    "repository": "https://github.com/nitinmeenaanu/Video-Encoder-Bot/",
     "env": {
-        "API_HASH": {
-            "description": "Your API HASH from my.telegram.org",
-            "value": ""
-        },
         "API_ID": {
-            "description": "Your API ID from my.telegram.org",
-            "value": ""
+            "description": "",
+            "required": "True"
+        },
+        "API_HASH": {
+            "description": "",
+            "required": "True"
         },
         "BOT_TOKEN": {
-            "description": "Bot token, get it from @BotFather.",
-            "value": ""
+            "description": "",
+            "required": "True"
         },
-        "SUDo_USERS": {
-            "description": "Bot owner's UserID.",
-            "value": ""
+        "SUDO_USERS": {
+            "description": "",
+            "required": "False"
         },
+        "OWNER_ID": {
+            "description": "Bot Owner UserID"
+        },
+        "PRESET": {
+            "description": "sf",
+            "required": "True"
+        },
+        "TUNE": {
+            "description": "film",
+            "required": "True"
+        },
+        "AUDIO": {
+            "description": "opus",
+            "required": "True"
+        },
+        "UPLOAD_AS_DOC": {
+            "description": "0",
+            "required": "True"
+        },
+        "DOWNLOAD_DIR": {
+            "description": "VideoEncoder/utils/downloads/",
+            "required": "True"
+        },
+        "ENCODE_DIR": {
+            "description": "VideoEncoder/utils/encodes/",
+            "required": "True"
+        },
+        "RESOLUTION": {
+            "description": "",
+            "required": "True"
+        },
+        "PRESET": {
+            "description": "",
+            "required": "True"
+        },
+        "CRF": {
+            "description": "",
+            "required": "True"
+        }
+  },
+   "addons": [{
+    "plan": "heroku-postgresql"
+  }],
+   "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
 }
